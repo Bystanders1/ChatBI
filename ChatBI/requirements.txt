@@ -1,0 +1,14 @@
+# Web Framework
+fastapi
+uvicorn[standard]
+python-dotenv
+pydantic-settings
+
+# LangChain Core
+langchain
+langchain-community
+langchain-openai
+
+# Database Connector
+sqlalchemy
+mysql-connector-python
