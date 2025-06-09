@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatBI 智能查询</title>
+    <link href="./dist/styles.css" rel="stylesheet">
+    <script src="./src/script.js" defer></script>
+</head>
+<body class="bg-gray-100 flex flex-col h-screen font-sans">
+
+<header class="bg-white shadow-md w-full p-4 z-10">
+    <h1 class="text-2xl font-bold text-center text-gray-800">ChatBI 智能专家查询</h1>
+</header>
+
+<div class="grid grid-cols-3 gap-4 flex-1 p-4 overflow-hidden">
+
+    <div id="info-panel" class="col-span-1 bg-white rounded-lg shadow-md p-4 flex flex-col gap-4 overflow-y-auto">
+        <div>
+            <h2 class="text-lg font-semibold text-gray-700 border-b pb-2 mb-2">SQL 查询语句</h2>
+            <div class="bg-gray-50 p-2 rounded-md font-mono text-sm text-gray-800 min-h-[100px]">
+                <pre><code id="sql-display">等待用户提问...</code></pre>
+            </div>
+        </div>
+        <div>
+            <h2 class="text-lg font-semibold text-gray-700 border-b pb-2 mb-2">原始数据</h2>
+            <div class="bg-gray-50 p-2 rounded-md font-mono text-sm text-gray-800 min-h-[200px]">
+                <pre><code id="data-display">等待查询结果...</code></pre>
+            </div>
+        </div>
+    </div>
+
+    <div id="chat-panel" class="col-span-2 bg-white rounded-lg shadow-md flex flex-col h-full">
+        <main id="chat-container" class="flex-1 p-4 overflow-y-auto">
+            <div class="bg-blue-100 text-blue-800 p-3 rounded-lg shadow-sm max-w-lg mb-4">
+                你好！我是您的智能助手。您可以向我提问关于专家库的任何问题。
+            </div>
+        </main>
+
+        <footer class="p-4 border-t">
+            <div class="max-w-4xl mx-auto flex items-center">
+                <input
+                        type="text"
+                        id="user-input"
+                        placeholder="在此输入您的问题..."
+                        class="flex-1 p-3 border rounded-l-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        autocomplete="off"
+                >
+                <button id="send-btn" class="bg-blue-600 text-white p-3 rounded-r-lg hover:bg-blue-700 disabled:bg-gray-400">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5" />
+                    </svg>
+                </button>
+            </div>
+        </footer>
+    </div>
+
+</div>
+
+</body>
+</html>

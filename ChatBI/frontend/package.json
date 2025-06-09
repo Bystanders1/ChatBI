@@ -1,0 +1,14 @@
+{
+  "name": "chatbi-frontend",
+  "version": "1.0.0",
+  "description": "Frontend for the ChatBI application",
+  "main": "index.html",
+  "scripts": {
+    "build:css": "tailwindcss -i ./src/input.css -o ./dist/styles.css --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.4.3"
+  }
+}
